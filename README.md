@@ -15,6 +15,7 @@
 
 - `Consumir API`: api que retorna filmes e séries melhores classificados
 - `Listar Filmes`: lista os filmes com melhor classificação no Imdb
+- `Gerar Sticker`: gera figurinhas/sticker personalizada para utilizar no whatapp
 
 
 ## 🎯 Desafio
@@ -33,7 +34,11 @@
 
 
 ## 📺 Imagem
-<img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/javaAlura.png?raw=true" width="450">
+<div>
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura1.jpg?raw=true" width="375" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura2.jpg?raw=true" width="375" />
+</div>
  
  
  
