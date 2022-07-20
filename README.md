@@ -21,6 +21,16 @@
 - [ ] Lista Séries com melhor classificação
 - [x] Exibir o a classificação com estrelas no console
 - [x] Receber JSON da API e converter com GSON ou Jackson
+- [x] Criar diretório de saída caso não exista
+- [x] Centralizar texto na imagem/sticker de forma dinâmica a depender do tamanho da fonte
+- [x] Pegar imagem no tamanho grande
+- [x] Caso não encontre a imagem informar ao usuário e não sair do programa
+- [ ] Passar um texto para colocar no sticker, classificação e outros
+- [ ] Utilizar a fonte Comic Sans
+- [ ] Colocar uma imagem ao lado fazendo joinha
+- [ ] Fazer o contorno na fonte/outline na cor preta
+- [ ] Aplicar filtro de imagens
+
 
 ## 📺 Imagem
 <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/javaAlura.png?raw=true" width="450">
