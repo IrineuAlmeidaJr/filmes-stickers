@@ -15,6 +15,7 @@
 
 - `Consumir API`: api que retorna filmes e séries melhores classificados
 - `Listar Filmes`: lista os filmes com melhor classificação no Imdb
+- `Gerar Sticker`: gera figurinhas/sticker personalizada para utilizar no whatapp
 
 
 ## 🎯 Desafio
