@@ -35,8 +35,8 @@
 
 ## 📺 Imagem
 <div>
-  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura1.jpg?raw=true" width="375" />
-  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura2.jpg?raw=true" width="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura1.jpg?raw=true" width="385" height="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura2.jpg?raw=true" width="385" height="375" />
 </div>
 <div>
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura3.jpg?raw=true" width="375" />
