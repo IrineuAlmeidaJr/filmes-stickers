@@ -28,7 +28,7 @@
 - [x] Caso não encontre a imagem informar ao usuário e não sair do programa
 - [ ] Passar um texto para colocar no sticker, classificação e outros
 - [x] Utilizar a fonte Comic Sans
-- [ ] Colocar uma imagem ao lado fazendo joinha
+- [x] Colocar uma imagem ao lado fazendo joinha
 - [x] Fazer o contorno na fonte/outline na cor preta
 - [ ] Aplicar filtro de imagens
 
@@ -36,8 +36,11 @@
 ## 📺 Imagem
 <div>
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura1.jpg?raw=true" width="375" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura2.jpg?raw=true" width="375" />
+</div>
+<div>
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura3.jpg?raw=true" width="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura4.jpeg?raw=true" width="375" />
 </div>
  
  
