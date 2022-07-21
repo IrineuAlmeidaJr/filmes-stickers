@@ -49,7 +49,7 @@
 <br/>
 <b>Branches Generic:</b> possibilita modificar apenas a url, não tem a saída no terminal personalida, apenas consta os nomes dos arquivos gerados.
 <div>
-  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/generic/sampleImg/javaAlura5.png?raw=true" width="475" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/generic/sampleImg/javaAlura5.png?raw=true" width="375" />
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/generic/sampleImg/javaAlura6.png?raw=true" width="375" />
 </div>
 
