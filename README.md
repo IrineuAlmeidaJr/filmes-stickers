@@ -27,9 +27,9 @@
 - [x] Pegar imagem no tamanho grande
 - [x] Caso não encontre a imagem informar ao usuário e não sair do programa
 - [ ] Passar um texto para colocar no sticker, classificação e outros
-- [ ] Utilizar a fonte Comic Sans
+- [x] Utilizar a fonte Comic Sans
 - [ ] Colocar uma imagem ao lado fazendo joinha
-- [ ] Fazer o contorno na fonte/outline na cor preta
+- [x] Fazer o contorno na fonte/outline na cor preta
 - [ ] Aplicar filtro de imagens
 
 
