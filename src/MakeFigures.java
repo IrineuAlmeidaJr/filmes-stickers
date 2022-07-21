@@ -48,10 +48,10 @@ public class MakeFigures implements ConsoleColors {
                     resizeWidth, resizeHeight, null);
 
             // Faz contorno na imagem
-            graphics.setStroke(new BasicStroke((float) (height *  0.002)));
+            graphics.setStroke(new BasicStroke((float) (fontSize *  0.049)));
             var textLayout = new TextLayout(phrase, font, graphics.getFontRenderContext());
             var shape = textLayout.getOutline(null);
-            graphics.setColor(Color.BLACK);
+            graphics.setColor(Color.black);
             graphics.translate(posX, posY);
             graphics.draw(shape);
 
