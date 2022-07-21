@@ -10,12 +10,12 @@ public class Main implements ConsoleColors {
         Scanner sc = new Scanner(System.in);
 
         // Fazer uma conexão HTTP e buscar os dados IMDB
-//        String url = "https://alura-imdb-api.herokuapp.com/movies";
-//        var extractor = new ContentExtractorImdb();
+        String url = "https://alura-imdb-api.herokuapp.com/movies";
+        var extractor = new ContentExtractorImdb();
 
         // Fazer uma conexão HTTP e buscar os dados NASA
-        String url = "https://api.nasa.gov/planetary/apod?api_key=07Ym1FwXQml5jSjvhvpPCsicpcgBo8TV15V7GrhT&start_date=2022-06-12&end_date=2022-06-14";
-        var extractor = new ContentExtractorNasa();
+//        String url = "https://api.nasa.gov/planetary/apod?api_key=07Ym1FwXQml5jSjvhvpPCsicpcgBo8TV15V7GrhT&start_date=2022-06-12&end_date=2022-06-14";
+//        var extractor = new ContentExtractorNasa();
 
         String json = new ClientHttp().fetchData(url);
 
@@ -28,7 +28,7 @@ public class Main implements ConsoleColors {
         String phrase = sc.nextLine();
 
         MakeFigures makeFigure = new MakeFigures();
-        for(int i=0; i < 3; i++) {
+        for(int i=0; i < 10; i++) {
             Conteudo content = contentList.get(i);
             try {
                 System.out.println(ANSI_YELLOW + content.getTitle());
