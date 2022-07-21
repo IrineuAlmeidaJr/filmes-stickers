@@ -1,6 +1,5 @@
 import java.io.InputStream;
 import java.net.URL;
-import com.google.gson.Gson;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,28 +9,30 @@ public class Main implements ConsoleColors {
 
         Scanner sc = new Scanner(System.in);
 
-        // Fazer uma conexão HTTP e buscar os top 250 filmes
+        // Fazer uma conexão HTTP e buscar os dados IMDB
+//        String url = "https://alura-imdb-api.herokuapp.com/movies";
+//        var extractor = new ContentExtractorImdb();
+
+        // Fazer uma conexão HTTP e buscar os dados NASA
         String url = "https://api.nasa.gov/planetary/apod?api_key=07Ym1FwXQml5jSjvhvpPCsicpcgBo8TV15V7GrhT&start_date=2022-06-12&end_date=2022-06-14";
+        var extractor = new ContentExtractorNasa();
 
         String json = new ClientHttp().fetchData(url);
 
-        var gson = new Gson();
-
         // Extrai os dados que interessam (no caso pegamos Titulo e Img/Url
-        List <GenericAPI> contentList =  List.of(gson.fromJson(json, GenericAPI[].class));
+
+        List <Conteudo> contentList = extractor.ContentsExtractor(json);
 
         // Leitura da frase que irá aparecer nos stickers
         System.out.printf(ANSI_BLUE + "\nInsira um texto para aparecer no seu sticker: ");
         String phrase = sc.nextLine();
 
         MakeFigures makeFigure = new MakeFigures();
-        for(int i=0; i < contentList.size(); i++) {
-            GenericAPI content = contentList.get(i);
+        for(int i=0; i < 3; i++) {
+            Conteudo content = contentList.get(i);
             try {
-                String urlImage = content.getUrl().replace("(@+)(.*).jpg$", "$1.jpg");
-                String title = content.getTitle();
-                System.out.println(ANSI_YELLOW + title);
-                InputStream inputStream = new URL(urlImage).openStream();
+                System.out.println(ANSI_YELLOW + content.getTitle());
+                InputStream inputStream = new URL(content.getUrlImage()).openStream();
                 makeFigure.create(inputStream, content.getTitle(), phrase);
             } catch (Exception e) {
                 System.out.println(ANSI_RED  + "ATENÇÃO: imagem não encontrada!");
@@ -39,9 +40,17 @@ public class Main implements ConsoleColors {
                 sc.nextLine();
             }
 
-
-
         }
+
+        /*
+            DESAFIOS:
+                - Trocar a classe conteudo para um record, que tem nas versões mais novas do java
+                - Criar sua própria exceção
+                - Mapear uma lista na outra usando Java 8
+                - Colocar uma enum que tenha uma url e um extrator de conteudo e usar na main só colocando o valor da enum
+                - Pegar uma outra API, ao exemplo, Marvel
+
+         */
 
 
 
