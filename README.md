@@ -26,7 +26,7 @@
 - [x] Centralizar texto na imagem/sticker de forma dinâmica a depender do tamanho da fonte
 - [x] Pegar imagem no tamanho grande
 - [x] Caso não encontre a imagem informar ao usuário e não sair do programa
-- [ ] Passar um texto para colocar no sticker, classificação e outros
+- [x] Passar um texto para colocar no sticker
 - [x] Utilizar a fonte Comic Sans
 - [x] Colocar uma imagem ao lado fazendo joinha
 - [x] Fazer o contorno na fonte/outline na cor preta
