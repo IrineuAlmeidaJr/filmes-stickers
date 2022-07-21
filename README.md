@@ -37,7 +37,7 @@
 
 
 ## 📺 Imagem
-V.master
+<b>Branches Master</b>
 <div>
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura1.jpg?raw=true" width="385" height="375" />
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura2.jpg?raw=true" width="385" height="375" />
@@ -46,7 +46,8 @@ V.master
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura3.jpg?raw=true" width="375" />
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura4.jpeg?raw=true" width="375" />
 </div>
-V.generic: possibilita modificar apenas a url, não tem a saída no terminal personalida, apenas consta os nomes dos arquivos gerados.
+<br/>
+<b>Branches Generic:</b> possibilita modificar apenas a url, não tem a saída no terminal personalida, apenas consta os nomes dos arquivos gerados.
 <div>
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/generic/sampleImg/javaAlura5.png?raw=true" width="475" />
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/generic/sampleImg/javaAlura6.png?raw=true" width="375" />
