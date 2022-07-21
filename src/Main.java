@@ -49,7 +49,7 @@ public class Main implements ConsoleColors {
                 sc.nextLine();
             }
 
-            System.out.println("" + film.getEmoticon(i));
+            System.out.println(ANSI_BLUE + "TOP " + (i+1) + " - " + film.getEmoticon(i));
             System.out.println(ANSI_YELLOW + "Título: " + film.getTitle());
             film.getRatingStar();
         }

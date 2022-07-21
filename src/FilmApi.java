@@ -1,4 +1,4 @@
-public class FilmApi {
+public class FilmApi implements ConsoleColors{
     private String id;
     private String rank;
     private String title;
@@ -9,7 +9,7 @@ public class FilmApi {
     private String imDbRating;
     private String imDbRatingCount;
 
-    public FilmApi(String id, String rank, String title, String fullTitle, String year, String image, String crew, String imDbRating, String imDbRatingCount) {
+    public FilmApi(String id, String rank, String title, String fullTitle, String year, String image, String crew, String imDbRating, String imDbRatingCount)  {
         this.id = id;
         this.rank = rank;
         this.title = title;
@@ -58,13 +58,14 @@ public class FilmApi {
     }
 
     public void getRatingStar() {
-        int numberStars = (int) Math.ceil((Double.parseDouble(imDbRating) / 2));
+        double rating = Double.parseDouble(imDbRating) / 2;
+        int numberStars = (int) Math.ceil(rating);
 //        String totalStars = " ";
 //        for (int i = 0; i < numberStars; i++) {
 //            totalStars += "⭐️";
 //        }
 //        System.out.println(totalStars);
-        System.out.println("" + "⭐️".repeat(Math.max(0, numberStars)) + "\n");
+        System.out.println("" + "⭐️".repeat(Math.max(0, numberStars)) + ANSI_BLUE + " (" + rating + ")\n");;
     }
 
     public String getEmoticon(int pos) {
