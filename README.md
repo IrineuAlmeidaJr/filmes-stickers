@@ -33,7 +33,7 @@
 - [ ] Aplicar filtro de imagens
 - [ ] Usar recursos do Java 8 e posterior, como Streams e Lambdas, para mapear uma lista em uma outra
 - [ ] Criar uma Enum que une, como configurações, a URL da API e o extrator utilizado
-- [ ] Consumir outras APIs que contenha imagens
+- [x] Consumir outras APIs que contenha imagens
 
 
 ## 📺 Imagem
@@ -47,9 +47,9 @@
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura4.jpeg?raw=true" width="375" />
 </div>
 <br/>
-<b>Branches Generic:</b> possibilita modificar apenas a url, não tem a saída no terminal personalida, apenas consta os nomes dos arquivos gerados.
+<b>Branches Generic:</b> possibilita modificar apenas a url, não tem a saída no terminal personalida, apenas consta os nomes dos arquivos gerados. Consumindo API da Marvel.
 <div>
-  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/generic/sampleImg/javaAlura5.png?raw=true" width="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/generic/sampleImg/javaAlura7.png?raw=true" width="355"  height="400" />
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/generic/sampleImg/javaAlura6.png?raw=true" width="375" />
 </div>
 
