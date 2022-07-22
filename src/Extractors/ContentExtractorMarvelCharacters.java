@@ -1,6 +1,7 @@
 package Extractors;
 
 import Interfaces.ContentExtractor;
+import Model.Content;
 import Model.MarvelCharacters.MarvelCharactersApi;
 import Model.MarvelCharacters.Results;
 import com.google.gson.Gson;

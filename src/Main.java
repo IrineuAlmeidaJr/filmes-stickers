@@ -1,7 +1,9 @@
+import Extractors.ContentExtractorImdb;
+import Extractors.ContentExtractorLanguages;
 import Extractors.ContentExtractorMarvelCharacters;
 import Extractors.ContentExtractorMarvelEvents;
 import Interfaces.ConsoleColors;
-import Extractors.Content;
+import Model.Content;
 import utils.ClientHttp;
 import utils.GenerateUrlMarvel;
 import utils.MakeFigures;
@@ -31,9 +33,13 @@ public class Main implements ConsoleColors {
 //        var extractor = new ContentExtractorMarvelEvents();
 
         // Fazer uma conexão HTTP e buscar os dados Personagens MARVEL
-        String url = "https://gateway.marvel.com/v1/public/characters";
-        url = new GenerateUrlMarvel().generate(url);
-        var extractor = new ContentExtractorMarvelCharacters();
+//        String url = "https://gateway.marvel.com/v1/public/characters";
+//        url = new GenerateUrlMarvel().generate(url);
+//        var extractor = new ContentExtractorMarvelCharacters();
+
+        // Api Local
+        String url = "http://localhost:8080/linguagens";
+        var extractor = new ContentExtractorLanguages();
 
         String json = new ClientHttp().fetchData(url);
 
@@ -46,7 +52,7 @@ public class Main implements ConsoleColors {
         String phrase = sc.nextLine();
 
         MakeFigures makeFigure = new MakeFigures();
-        for(int i=0; i < 3; i++) {
+        for(int i=0; i < 2; i++) {
             Content content = contentList.get(i);
             try {
                 System.out.println(ANSI_YELLOW + content.getTitle());
@@ -66,7 +72,7 @@ public class Main implements ConsoleColors {
                 - Criar sua própria exceção
                 - Mapear uma lista na outra usando Java 8
                 - Colocar uma enum que tenha uma url e um extrator de conteudo e usar na main só colocando o valor da enum
-                - Pegar uma outra API, ao exemplo, Marvel
+
 
          */
 

@@ -1,4 +1,4 @@
-package Extractors;
+package Model;
 
 public class Content {
 

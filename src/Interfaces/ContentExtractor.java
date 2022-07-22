@@ -1,6 +1,6 @@
 package Interfaces;
 
-import Extractors.Content;
+import Model.Content;
 
 import java.util.List;
 

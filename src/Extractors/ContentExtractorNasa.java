@@ -1,6 +1,7 @@
 package Extractors;
 
 import Interfaces.ContentExtractor;
+import Model.Content;
 import Model.Nassa.NasaApi;
 import com.google.gson.Gson;
 

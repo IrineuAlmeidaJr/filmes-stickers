@@ -1,6 +1,7 @@
 package Extractors;
 
 import Interfaces.ContentExtractor;
+import Model.Content;
 import Model.MarvelEvents.MarvelEventsApi;
 import Model.MarvelEvents.Results;
 import com.google.gson.Gson;
