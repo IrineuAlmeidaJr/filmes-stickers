@@ -1,7 +1,7 @@
-import Extractors.ContentExtractorImdb;
 import Interfaces.ConsoleColors;
 import Extractors.Content;
 import utils.ClientHttp;
+import utils.MakeFigures;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -99,7 +99,7 @@ public class Main implements ConsoleColors {
         System.out.println(ANSI_BLUE + "\n\t\t- - - - LISTA MELHORES FILMES - - - -");
         System.out.println(ANSI_BLUE + "Lista de filme classificadas conforme avaliação no site IMDB\n");
         Model.Imdb.FilmApi film;
-        var makeFigure = new MakeFigures();
+        var makeFigure = new utils.MakeFigures();
         for(int i=0; i < 10; i++) {
             film = listFilm.get(i);
             try {

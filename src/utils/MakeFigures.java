@@ -1,3 +1,5 @@
+package utils;
+
 import Interfaces.ConsoleColors;
 
 import javax.imageio.ImageIO;
