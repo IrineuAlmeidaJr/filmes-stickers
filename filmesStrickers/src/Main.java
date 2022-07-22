@@ -33,13 +33,13 @@ public class Main implements ConsoleColors {
 //        var extractor = new ContentExtractorMarvelEvents();
 
         // Fazer uma conexão HTTP e buscar os dados Personagens MARVEL
-//        String url = "https://gateway.marvel.com/v1/public/characters";
-//        url = new GenerateUrlMarvel().generate(url);
-//        var extractor = new ContentExtractorMarvelCharacters();
+        String url = "https://gateway.marvel.com/v1/public/characters";
+        url = new GenerateUrlMarvel().generate(url);
+        var extractor = new ContentExtractorMarvelCharacters();
 
         // Api Local
-        String url = "http://localhost:8080/linguagens";
-        var extractor = new ContentExtractorLanguages();
+//        String url = "http://localhost:8080/linguagens";
+//        var extractor = new ContentExtractorLanguages();
 
         String json = new ClientHttp().fetchData(url);
 
