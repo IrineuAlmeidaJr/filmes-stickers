@@ -1,3 +1,5 @@
+package Model.Nassa;
+
 public class NasaApi {
     private String copyright;
     private String date;

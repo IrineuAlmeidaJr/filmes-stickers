@@ -1,3 +1,8 @@
+import Extractors.ContentExtractorImdb;
+import Interfaces.ConsoleColors;
+import Extractors.Content;
+import utils.ClientHttp;
+
 import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
@@ -10,26 +15,30 @@ public class Main implements ConsoleColors {
         Scanner sc = new Scanner(System.in);
 
         // Fazer uma conexão HTTP e buscar os dados IMDB
-        String url = "https://alura-imdb-api.herokuapp.com/movies";
-        var extractor = new ContentExtractorImdb();
+//        String url = "https://alura-imdb-api.herokuapp.com/movies";
+//        var extractor = new ContentExtractorImdb();
 
         // Fazer uma conexão HTTP e buscar os dados NASA
 //        String url = "https://api.nasa.gov/planetary/apod?api_key=07Ym1FwXQml5jSjvhvpPCsicpcgBo8TV15V7GrhT&start_date=2022-06-12&end_date=2022-06-14";
-//        var extractor = new ContentExtractorNasa();
+//        var extractor = new Extractors.ContentExtractorNasa();
+
+        // Fazer uma conexão HTTP e buscar os dados MARVEL
+        String url = "https://gateway.marvel.com/v1/public/events";
+        var extractor = new Extractors.ContentExtractorMarvel();
 
         String json = new ClientHttp().fetchData(url);
 
         // Extrai os dados que interessam (no caso pegamos Titulo e Img/Url
 
-        List <Conteudo> contentList = extractor.ContentsExtractor(json);
+        List <Content> contentList = extractor.ContentsExtractor(json);
 
         // Leitura da frase que irá aparecer nos stickers
         System.out.printf(ANSI_BLUE + "\nInsira um texto para aparecer no seu sticker: ");
         String phrase = sc.nextLine();
 
         MakeFigures makeFigure = new MakeFigures();
-        for(int i=0; i < 10; i++) {
-            Conteudo content = contentList.get(i);
+        for(int i=0; i < 3; i++) {
+            Content content = contentList.get(i);
             try {
                 System.out.println(ANSI_YELLOW + content.getTitle());
                 InputStream inputStream = new URL(content.getUrlImage()).openStream();
@@ -79,8 +88,8 @@ public class Main implements ConsoleColors {
         var body = response.body();
 
         var gson = new Gson();
-        ImdbApi items = gson.fromJson(body, ImdbApi.class);
-        List <FilmApi> listFilm = List.of(items.getItems());
+        Model.Imdb.ImdbApi items = gson.fromJson(body, Model.Imdb.ImdbApi.class);
+        List <Model.Imdb.FilmApi> listFilm = List.of(items.getItems());
 
         // Leitura da frase que irá aparecer nos stickers
         System.out.printf(ANSI_BLUE + "\nInsira um texto para aparecer no seu sticker: ");
@@ -89,7 +98,7 @@ public class Main implements ConsoleColors {
         // Exibir e manipular os dados
         System.out.println(ANSI_BLUE + "\n\t\t- - - - LISTA MELHORES FILMES - - - -");
         System.out.println(ANSI_BLUE + "Lista de filme classificadas conforme avaliação no site IMDB\n");
-        FilmApi film;
+        Model.Imdb.FilmApi film;
         var makeFigure = new MakeFigures();
         for(int i=0; i < 10; i++) {
             film = listFilm.get(i);
