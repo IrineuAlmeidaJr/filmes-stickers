@@ -1,6 +1,9 @@
+import Extractors.ContentExtractorMarvelCharacters;
+import Extractors.ContentExtractorMarvelEvents;
 import Interfaces.ConsoleColors;
 import Extractors.Content;
 import utils.ClientHttp;
+import utils.GenerateUrlMarvel;
 import utils.MakeFigures;
 
 import java.io.InputStream;
@@ -22,9 +25,15 @@ public class Main implements ConsoleColors {
 //        String url = "https://api.nasa.gov/planetary/apod?api_key=07Ym1FwXQml5jSjvhvpPCsicpcgBo8TV15V7GrhT&start_date=2022-06-12&end_date=2022-06-14";
 //        var extractor = new Extractors.ContentExtractorNasa();
 
-        // Fazer uma conexão HTTP e buscar os dados MARVEL
-        String url = "https://gateway.marvel.com/v1/public/events";
-        var extractor = new Extractors.ContentExtractorMarvel();
+        // Fazer uma conexão HTTP e buscar os dados Eventos MARVEL
+//        String url = "https://gateway.marvel.com/v1/public/events";
+//        url = new GenerateUrlMarvel().generate(url);
+//        var extractor = new ContentExtractorMarvelEvents();
+
+        // Fazer uma conexão HTTP e buscar os dados Personagens MARVEL
+        String url = "https://gateway.marvel.com/v1/public/characters";
+        url = new GenerateUrlMarvel().generate(url);
+        var extractor = new ContentExtractorMarvelCharacters();
 
         String json = new ClientHttp().fetchData(url);
 

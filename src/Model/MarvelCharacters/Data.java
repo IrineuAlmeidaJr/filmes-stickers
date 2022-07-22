@@ -1,4 +1,4 @@
-package Model.Marvel;
+package Model.MarvelCharacters;
 
 public class Data {
     private int offset;
