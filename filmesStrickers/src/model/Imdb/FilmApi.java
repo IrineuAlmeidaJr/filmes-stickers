@@ -1,6 +1,6 @@
-package Model.Imdb;
+package model.Imdb;
 
-import Interfaces.ConsoleColors;
+import interfaces.ConsoleColors;
 
 public class FilmApi implements ConsoleColors {
     private String id;

@@ -1,11 +1,8 @@
-package Extractors;
+package extractors;
 
-import Interfaces.ContentExtractor;
-import Model.Content;
-import Model.Imdb.FilmApi;
-import Model.Imdb.ImdbApi;
-import Model.Language.Language;
-import Model.Nassa.NasaApi;
+import interfaces.ContentExtractor;
+import model.Content;
+import model.Language.Language;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

@@ -1,8 +1,8 @@
-package Extractors;
+package extractors;
 
-import Interfaces.ContentExtractor;
-import Model.Content;
-import Model.Nassa.NasaApi;
+import interfaces.ContentExtractor;
+import model.Content;
+import model.Nassa.NasaApi;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

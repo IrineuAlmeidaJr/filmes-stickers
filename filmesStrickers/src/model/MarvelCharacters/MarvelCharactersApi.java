@@ -1,9 +1,9 @@
-package Model.MarvelEvents;
+package model.MarvelCharacters;
 
-public class MarvelEventsApi {
+public class MarvelCharactersApi {
     private Data data;
 
-    public MarvelEventsApi(Data data) {
+    public MarvelCharactersApi(Data data) {
         this.data = data;
     }
 

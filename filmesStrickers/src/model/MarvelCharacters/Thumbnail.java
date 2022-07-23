@@ -1,4 +1,4 @@
-package Model.MarvelEvents;
+package model.MarvelCharacters;
 
 public class Thumbnail {
     private String path;

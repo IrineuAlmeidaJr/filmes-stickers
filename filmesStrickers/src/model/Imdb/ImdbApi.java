@@ -1,4 +1,4 @@
-package Model.Imdb;
+package model.Imdb;
 
 import java.util.Map;
 

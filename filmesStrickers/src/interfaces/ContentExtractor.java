@@ -1,6 +1,6 @@
-package Interfaces;
+package interfaces;
 
-import Model.Content;
+import model.Content;
 
 import java.util.List;
 

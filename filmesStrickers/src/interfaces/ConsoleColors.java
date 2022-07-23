@@ -1,4 +1,4 @@
-package Interfaces;
+package interfaces;
 
 public interface ConsoleColors {
     public static final String ANSI_YELLOW = "\u001B[33m";

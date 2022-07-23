@@ -1,6 +1,6 @@
 package utils;
 
-import Interfaces.ConsoleColors;
+import interfaces.ConsoleColors;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -63,11 +63,11 @@ public class MakeFigures implements ConsoleColors {
             fileName.concat(".png");
             File figure = new File("saida/"+fileName + ".png");
             // Se não existir o diretório ele cria
-//            if(figure.mkdirs())
+            if(figure.mkdirs())
                 ImageIO.write(newImage, "png", figure);
-//            else {
-//                System.out.println(ANSI_RED + "Imagem como nome já existente");
-//            }
+            else {
+                System.out.println(ANSI_RED + "Imagem como nome já existente");
+            }
 
         } catch (IOException e) {
             System.out.println("Não foi possível ler a imagem");

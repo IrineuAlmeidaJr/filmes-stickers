@@ -1,9 +1,9 @@
-package Extractors;
+package extractors;
 
-import Interfaces.ContentExtractor;
-import Model.Content;
-import Model.Imdb.FilmApi;
-import Model.Imdb.ImdbApi;
+import interfaces.ContentExtractor;
+import model.Content;
+import model.Imdb.FilmApi;
+import model.Imdb.ImdbApi;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

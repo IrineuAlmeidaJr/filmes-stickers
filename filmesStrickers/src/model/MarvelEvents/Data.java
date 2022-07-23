@@ -1,4 +1,4 @@
-package Model.MarvelEvents;
+package model.MarvelEvents;
 
 public class Data {
     private int offset;

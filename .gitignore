@@ -29,4 +29,4 @@ bin/
 .DS_Store
 
 ### Image ###
-/saida/*.png
+filmesStrickers//saida/*.png

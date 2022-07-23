@@ -1,4 +1,4 @@
-package Model.Language;
+package model.Language;
 
 public class Language {
     private int racking;

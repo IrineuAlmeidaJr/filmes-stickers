@@ -1,9 +1,8 @@
-import Extractors.ContentExtractorImdb;
-import Extractors.ContentExtractorLanguages;
-import Extractors.ContentExtractorMarvelCharacters;
-import Extractors.ContentExtractorMarvelEvents;
-import Interfaces.ConsoleColors;
-import Model.Content;
+import enumerator.API;
+import extractors.ContentExtractorImdb;
+import extractors.ContentExtractorMarvelCharacters;
+import interfaces.ConsoleColors;
+import model.Content;
 import utils.ClientHttp;
 import utils.GenerateUrlMarvel;
 import utils.MakeFigures;
@@ -19,35 +18,11 @@ public class Main implements ConsoleColors {
 
         Scanner sc = new Scanner(System.in);
 
-        // Fazer uma conexão HTTP e buscar os dados IMDB
-//        String url = "https://alura-imdb-api.herokuapp.com/movies";
-//        var extractor = new ContentExtractorImdb();
+        API api = API.MARVEL_EVENTS;
+        String json = new ClientHttp().fetchData(api.getUrl());
+        List <Content> contentList = api.getExtractor().ContentsExtractor(json);
 
-        // Fazer uma conexão HTTP e buscar os dados NASA
-//        String url = "https://api.nasa.gov/planetary/apod?api_key=07Ym1FwXQml5jSjvhvpPCsicpcgBo8TV15V7GrhT&start_date=2022-06-12&end_date=2022-06-14";
-//        var extractor = new Extractors.ContentExtractorNasa();
-
-        // Fazer uma conexão HTTP e buscar os dados Eventos MARVEL
-//        String url = "https://gateway.marvel.com/v1/public/events";
-//        url = new GenerateUrlMarvel().generate(url);
-//        var extractor = new ContentExtractorMarvelEvents();
-
-        // Fazer uma conexão HTTP e buscar os dados Personagens MARVEL
-        String url = "https://gateway.marvel.com/v1/public/characters";
-        url = new GenerateUrlMarvel().generate(url);
-        var extractor = new ContentExtractorMarvelCharacters();
-
-        // Api Local
-//        String url = "http://localhost:8080/linguagens";
-//        var extractor = new ContentExtractorLanguages();
-
-        String json = new ClientHttp().fetchData(url);
-
-        // Extrai os dados que interessam (no caso pegamos Titulo e Img/Url
-
-        List <Content> contentList = extractor.ContentsExtractor(json);
-
-        // Leitura da frase que irá aparecer nos stickers
+        // Leitura da frase que será colocada nos stickers
         System.out.printf(ANSI_BLUE + "\nInsira um texto para aparecer no seu sticker: ");
         String phrase = sc.nextLine();
 
@@ -63,78 +38,7 @@ public class Main implements ConsoleColors {
                 System.out.println(ANSI_RED  + "ENTER para Continuar");
                 sc.nextLine();
             }
-
         }
-
-        /*
-            DESAFIOS:
-                - Trocar a classe conteudo para um record, que tem nas versões mais novas do java
-                - Criar sua própria exceção
-                - Mapear uma lista na outra usando Java 8
-                - Colocar uma enum que tenha uma url e um extrator de conteudo e usar na main só colocando o valor da enum
-
-
-         */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*  Parte do código de exibir e gerar figurinha Filmes IMDB  */
-        /*
-          //Fazer uma conexão HTTP e buscar os top 250 filmes
-        String url = "https://alura-imdb-api.herokuapp.com/movies";
-
-        var endereco = URI.create(url);
-        var client = HttpClient.newHttpClient();
-        var request = HttpRequest.newBuilder(endereco).GET().build();
-        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        var body = response.body();
-
-        var gson = new Gson();
-        Model.Imdb.ImdbApi items = gson.fromJson(body, Model.Imdb.ImdbApi.class);
-        List <Model.Imdb.FilmApi> listFilm = List.of(items.getItems());
-
-        // Leitura da frase que irá aparecer nos stickers
-        System.out.printf(ANSI_BLUE + "\nInsira um texto para aparecer no seu sticker: ");
-        String phrase = sc.nextLine();
-
-        // Exibir e manipular os dados
-        System.out.println(ANSI_BLUE + "\n\t\t- - - - LISTA MELHORES FILMES - - - -");
-        System.out.println(ANSI_BLUE + "Lista de filme classificadas conforme avaliação no site IMDB\n");
-        Model.Imdb.FilmApi film;
-        var makeFigure = new utils.MakeFigures();
-        for(int i=0; i < 10; i++) {
-            film = listFilm.get(i);
-            try {
-                String imgSmall = film.getImage();
-                String imgLarge = imgSmall.split("_" )[0] + "jpg";
-                InputStream inputStream = new URL(imgLarge).openStream();
-                makeFigure.create(inputStream, film.getTitle(), phrase);
-            } catch (Exception e) {
-                System.out.println(ANSI_RED  + "ATENÇÃO: imagem não encontrada!");
-                System.out.println(ANSI_RED  + "ENTER para Continuar");
-                sc.nextLine();
-            }
-
-            System.out.println(ANSI_BLUE + "TOP " + (i+1) + " - " + film.getEmoticon(i));
-            System.out.println(ANSI_YELLOW + "Título: " + film.getTitle());
-            film.getRatingStar();
-        }
-
-        */
-
 
         /*
             ***OBS: olhar na documentação o InputStream: https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html

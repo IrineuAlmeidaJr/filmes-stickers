@@ -1,21 +1,21 @@
-package Extractors;
+package extractors;
 
-import Interfaces.ContentExtractor;
-import Model.Content;
-import Model.MarvelCharacters.MarvelCharactersApi;
-import Model.MarvelCharacters.Results;
+import interfaces.ContentExtractor;
+import model.Content;
+import model.MarvelEvents.MarvelEventsApi;
+import model.MarvelEvents.Results;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContentExtractorMarvelCharacters implements ContentExtractor {
+public class ContentExtractorMarvelEvents implements ContentExtractor {
 
     @Override
     public List<Content> ContentsExtractor(String json) {
         // Extrai os dados que interessam (no caso pegamos Titulo e Img/Url)
         Gson gson = new Gson();
-        MarvelCharactersApi data = gson.fromJson(json, MarvelCharactersApi.class);
+        MarvelEventsApi data = gson.fromJson(json, MarvelEventsApi.class);
         List<Results> contentList = List.of(data.getData().getResults());
 
         List<Content> contents = new ArrayList<>();
@@ -23,7 +23,7 @@ public class ContentExtractorMarvelCharacters implements ContentExtractor {
         // popular a lista de conteudos
         for (Results content : contentList) {
             String img = content.getThumbnail().getPath() + "." + content.getThumbnail().getExtension();
-            contents.add(new Content(content.getName(), img));
+            contents.add(new Content(content.getTitle(), img));
         }
 
         return contents;

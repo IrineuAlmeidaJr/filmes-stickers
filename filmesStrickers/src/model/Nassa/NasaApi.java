@@ -1,4 +1,4 @@
-package Model.Nassa;
+package model.Nassa;
 
 public class NasaApi {
     private String copyright;

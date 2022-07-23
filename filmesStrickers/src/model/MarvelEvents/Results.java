@@ -1,4 +1,4 @@
-package Model.MarvelEvents;
+package model.MarvelEvents;
 
 public class Results {
     private int id;
