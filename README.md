@@ -31,8 +31,9 @@
 - [x] Colocar uma imagem ao lado fazendo joinha
 - [x] Fazer o contorno na fonte/outline na cor preta
 - [ ] Aplicar filtro de imagens
+- [ ] Trocar a classe conteudo para um record, que tem nas versões mais novas do java 
 - [ ] Usar recursos do Java 8 e posterior, como Streams e Lambdas, para mapear uma lista em uma outra
-- [ ] Criar uma Enum que une, como configurações, a URL da API e o extrator utilizado
+- [x] Criar uma Enum que une, como configurações, a URL da API e o extrator utilizado
 - [x] Consumir outras APIs que contenha imagens
 
 
