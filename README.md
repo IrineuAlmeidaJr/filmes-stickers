@@ -39,8 +39,8 @@
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura2.jpg?raw=true" width="375" />
 </div>
 <div>
-  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura3.jpg?raw=true" width="375" />
-  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura4.jpeg?raw=true" width="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/apiSpring/filmesStrickers/sampleImg/javaAlura7.png?raw=true" width="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/apiSpring/filmesStrickers/sampleImg/javaAlura6.png?raw=true" width="375" />
 </div>
  
  
