@@ -26,24 +26,36 @@
 - [x] Centralizar texto na imagem/sticker de forma dinâmica a depender do tamanho da fonte
 - [x] Pegar imagem no tamanho grande
 - [x] Caso não encontre a imagem informar ao usuário e não sair do programa
-- [ ] Passar um texto para colocar no sticker, classificação e outros
+- [x] Passar um texto para colocar no sticker
 - [x] Utilizar a fonte Comic Sans
 - [x] Colocar uma imagem ao lado fazendo joinha
 - [x] Fazer o contorno na fonte/outline na cor preta
 - [ ] Aplicar filtro de imagens
-
+- [ ] Trocar a classe conteudo para um record, que tem nas versões mais novas do java 
+- [ ] Usar recursos do Java 8 e posterior, como Streams e Lambdas, para mapear uma lista em uma outra
+- [x] Criar uma Enum que une, como configurações, a URL da API e o extrator utilizado
+- [x] Consumir outras APIs que contenha imagens
+- [ ] CRUD (Create, Read, Update e Delete) para que se possa atualizar e excluir uma linguagem cadastrada
+- [ ] Devolver a listagem ordenada pelo ranking
+- [ ] Retornar o status 201 quando um recurso (linguagem, no nosso caso) for cadastrado através do POST
 
 ## 📺 Imagem
+- <b>Branches Master</b>
 <div>
-  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura1.jpg?raw=true" width="375" />
-  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura2.jpg?raw=true" width="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura1.jpg?raw=true" width="385" height="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura2.jpg?raw=true" width="385" height="375" />
 </div>
 <div>
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura3.jpg?raw=true" width="375" />
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura4.jpeg?raw=true" width="375" />
 </div>
- 
- 
+<br/>
+- <b>Branches apiSpring:</b> possibilita modificar apenas a url, não tem a saída no terminal personalida, apenas consta os nomes dos arquivos gerados. Consumindo API da Marvel.
+<div>
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/apiSpring/filmesStrickers/sampleImg/javaAlura7.png?raw=true" width="375" />
+  <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/apiSpring/filmesStrickers/sampleImg/javaAlura6.png?raw=true" width="375" />
+</div>
+
  
 ## Instalação
 
