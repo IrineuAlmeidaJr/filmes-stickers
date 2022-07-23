@@ -50,7 +50,7 @@
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/master/sampleImg/javaAlura4.jpeg?raw=true" width="375" />
 </div>
 <br/>
-- <b>Branches Generic:</b> possibilita modificar apenas a url, não tem a saída no terminal personalida, apenas consta os nomes dos arquivos gerados. Consumindo API da Marvel.
+- <b>Branches apiSpring:</b> possibilita modificar apenas a url, não tem a saída no terminal personalida, apenas consta os nomes dos arquivos gerados. Consumindo API da Marvel.
 <div>
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/apiSpring/filmesStrickers/sampleImg/javaAlura7.png?raw=true" width="375" />
   <img src="https://github.com/IrineuAlmeidaJr/filmesStickers/blob/apiSpring/filmesStrickers/sampleImg/javaAlura6.png?raw=true" width="375" />
