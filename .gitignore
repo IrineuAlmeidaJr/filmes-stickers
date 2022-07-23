@@ -28,5 +28,6 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-### Image ###
+### Person GitIgnore ###
 filmesStrickers/saida/*.png
+filmesStrickers/src/config/*.java

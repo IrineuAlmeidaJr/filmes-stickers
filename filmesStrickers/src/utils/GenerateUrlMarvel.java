@@ -1,5 +1,7 @@
 package utils;
 
+import config.Keys;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -9,8 +11,9 @@ import java.util.Date;
 public class GenerateUrlMarvel {
 
     public String generate(String url) {
-        String publicKey = "df0461aa09c051f6d25ce4c5c7ce4f79";
-        String privateKey = "8a3aee18d3e8b4efd097fe96016916cd733f8ecc";
+        var key = new Keys();
+        String publicKey = key.getPublicKey();
+        String privateKey = key.getPrivateKey();
         // Trabalha com
         if (url.contains("marvel") && url.contains("events")) {
             url = "https://gateway.marvel.com/v1/public/events?" + accessUrl(publicKey, privateKey);
