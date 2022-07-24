@@ -35,7 +35,7 @@
 - [ ] Usar recursos do Java 8 e posterior, como Streams e Lambdas, para mapear uma lista em uma outra
 - [x] Criar uma Enum que une, como configurações, a URL da API e o extrator utilizado
 - [x] Consumir outras APIs que contenha imagens
-- [ ] CRUD (Create, Read, Update e Delete) para que se possa atualizar e excluir uma linguagem cadastrada
+- [x] CRUD (Create, Read, Update e Delete) para que se possa atualizar e excluir uma linguagem cadastrada
 - [ ] Devolver a listagem ordenada pelo ranking
 - [ ] Retornar o status 201 quando um recurso (linguagem, no nosso caso) for cadastrado através do POST
 
