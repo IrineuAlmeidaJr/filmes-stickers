@@ -13,7 +13,7 @@ public enum API {
             new ContentExtractorMarvelCharacters()),
     MARVEL_EVENTS(new GenerateUrlMarvel().generate("https://gateway.marvel.com/v1/public/events"),
             new ContentExtractorMarvelEvents()),
-    LANGUAGES("http://localhost:8080/linguagens",
+    LANGUAGES("https://alura-linguagens-api-sp.herokuapp.com/linguagens",
             new ContentExtractorLanguages());
 
     private String url;

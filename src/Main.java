@@ -18,7 +18,7 @@ public class Main implements ConsoleColors {
 
         Scanner sc = new Scanner(System.in);
 
-        API api = API.MARVEL_EVENTS;
+        API api = API.LANGUAGES;
         String json = new ClientHttp().fetchData(api.getUrl());
         List <Content> contentList = api.getExtractor().ContentsExtractor(json);
 
