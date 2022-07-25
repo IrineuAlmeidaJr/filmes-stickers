@@ -1,11 +1,14 @@
+import enumerator.API;
+import extractors.ContentExtractorImdb;
+import extractors.ContentExtractorMarvelCharacters;
+import interfaces.ConsoleColors;
+import model.Content;
+import utils.ClientHttp;
+import utils.GenerateUrlMarvel;
+import utils.MakeFigures;
+
 import java.io.InputStream;
-import java.net.URI;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
-import com.google.gson.Gson;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,43 +18,26 @@ public class Main implements ConsoleColors {
 
         Scanner sc = new Scanner(System.in);
 
-        // Fazer uma conexão HTTP e buscar os top 250 filmes
-        String url = "https://alura-imdb-api.herokuapp.com/movies";
-        var endereco = URI.create(url);
-        var client = HttpClient.newHttpClient();
-        var request = HttpRequest.newBuilder(endereco).GET().build();
-        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        var body = response.body();
+        API api = API.MARVEL_EVENTS;
+        String json = new ClientHttp().fetchData(api.getUrl());
+        List <Content> contentList = api.getExtractor().ContentsExtractor(json);
 
-        var gson = new Gson();
-        ImdbApi items = gson.fromJson(body, ImdbApi.class);
-        List <FilmApi> listFilm = List.of(items.getItems());
-
-        // Leitura da frase que irá aparecer nos stickers
+        // Leitura da frase que será colocada nos stickers
         System.out.printf(ANSI_BLUE + "\nInsira um texto para aparecer no seu sticker: ");
         String phrase = sc.nextLine();
 
-        // Exibir e manipular os dados
-        System.out.println(ANSI_BLUE + "\n\t\t- - - - LISTA MELHORES FILMES - - - -");
-        System.out.println(ANSI_BLUE + "Lista de filme classificadas conforme avaliação no site IMDB\n");
-        FilmApi film;
-        var makeFigure = new MakeFigures();
-        for(int i=0; i < 5; i++) {
-            film = listFilm.get(i);
+        MakeFigures makeFigure = new MakeFigures();
+        for(int i=0; i < 2; i++) {
+            Content content = contentList.get(i);
             try {
-                String imgSmall = film.getImage();
-                String imgLarge = imgSmall.split("_" )[0] + "jpg";
-                InputStream inputStream = new URL(imgLarge).openStream();
-                makeFigure.create(inputStream, film.getTitle(), phrase);
+                System.out.println(ANSI_YELLOW + content.getTitle());
+                InputStream inputStream = new URL(content.getUrlImage()).openStream();
+                makeFigure.create(inputStream, content.getTitle(), phrase);
             } catch (Exception e) {
                 System.out.println(ANSI_RED  + "ATENÇÃO: imagem não encontrada!");
                 System.out.println(ANSI_RED  + "ENTER para Continuar");
                 sc.nextLine();
             }
-
-            System.out.println(ANSI_BLUE + "TOP " + (i+1) + " - " + film.getEmoticon(i));
-            System.out.println(ANSI_YELLOW + "Título: " + film.getTitle());
-            film.getRatingStar();
         }
 
         /*

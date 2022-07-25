@@ -1,3 +1,7 @@
+package utils;
+
+import interfaces.ConsoleColors;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.font.TextLayout;
@@ -48,10 +52,10 @@ public class MakeFigures implements ConsoleColors {
                     resizeWidth, resizeHeight, null);
 
             // Faz contorno na imagem
-            graphics.setStroke(new BasicStroke((float) (height *  0.002)));
+            graphics.setStroke(new BasicStroke((float) (fontSize *  0.049)));
             var textLayout = new TextLayout(phrase, font, graphics.getFontRenderContext());
             var shape = textLayout.getOutline(null);
-            graphics.setColor(Color.BLACK);
+            graphics.setColor(Color.black);
             graphics.translate(posX, posY);
             graphics.draw(shape);
 
@@ -59,11 +63,11 @@ public class MakeFigures implements ConsoleColors {
             fileName.concat(".png");
             File figure = new File("saida/"+fileName + ".png");
             // Se não existir o diretório ele cria
-//            if(figure.mkdirs())
+            if(figure.mkdirs())
                 ImageIO.write(newImage, "png", figure);
-//            else {
-//                System.out.println(ANSI_RED + "Imagem como nome já existente");
-//            }
+            else {
+                System.out.println(ANSI_RED + "Imagem como nome já existente");
+            }
 
         } catch (IOException e) {
             System.out.println("Não foi possível ler a imagem");

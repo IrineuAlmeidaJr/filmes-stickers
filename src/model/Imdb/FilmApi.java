@@ -1,4 +1,8 @@
-public class FilmApi implements ConsoleColors{
+package model.Imdb;
+
+import interfaces.ConsoleColors;
+
+public class FilmApi implements ConsoleColors {
     private String id;
     private String rank;
     private String title;

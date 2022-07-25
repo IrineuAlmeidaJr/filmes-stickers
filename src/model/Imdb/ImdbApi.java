@@ -1,3 +1,5 @@
+package model.Imdb;
+
 import java.util.Map;
 
 public class ImdbApi {
