@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/filmesStickers.iml" filepath="$PROJECT_DIR$/filmesStickers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linguagens-api.iml" filepath="$PROJECT_DIR$/linguagens-api.iml" />
     </modules>
   </component>
 </project>
