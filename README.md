@@ -11,7 +11,6 @@ Abaixo aplicação web consumindo api feita com java(spring), ainda não cadastr
 ## 🖥️ Tecnologías Utilizadas:
 
 - Java 11 </br>
-- Java 17 </br>
 
 ## :hammer: Funcionalidades do projeto
 
