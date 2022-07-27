@@ -6,7 +6,7 @@
 </p>
 
 Abaixo aplicação web consumindo api feita com java(spring):
-<h2 align="center"><a href="https://votacao-video-game-f11xr7y1f-irineualmeidajr.vercel.app">Clique aqui para ver meu projeto!</a></h2>
+<h2 align="center"><a href="https://votacao-video-game.vercel.app">Clique aqui para ver meu projeto!</a></h2>
 
 ## 🖥️ Tecnologías Utilizadas:
 
